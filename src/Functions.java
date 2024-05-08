@@ -11,7 +11,7 @@ class Functions {
       // Call of system.in to read input from console by bufferedreader
       BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // Эта хрень не работает StandardCharsets.UTF_8 и "cp866" тоже
       String text = reader.readLine(); // Write string with stream from buffer
-      
+
       return text;
     } catch (IOException exception) {
       exception.printStackTrace();
@@ -45,6 +45,8 @@ class Functions {
         return "\u001B[0m";
       case("yellow"):
         return "\u001B[33m";
+      case("purple"):
+        return "\u001B[35m";
       default:
         return "";
     }
@@ -95,7 +97,7 @@ class Functions {
 
     for (int i = 0; i < text.length; i++) {
       if (freqArr[i] != 0) {
-          System.out.printf("%s:%d", charArr[i], freqArr[i]);
+          System.out.printf(Functions.Color("green") + "%s : " + Functions.Color("yellow") + "%d", charArr[i], freqArr[i]);
           System.out.println();
       }
     }
@@ -105,8 +107,6 @@ class Functions {
     byte[] array = new byte[20]; // Length of generated text
     new Random().nextBytes(array);
     String generatedString = new String(array, Charset.forName("cp866"));
-
-    System.out.println(generatedString);
 
     return generatedString;
   }
