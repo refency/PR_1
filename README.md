@@ -1,18 +1,19 @@
-## Getting Started
+## Программная реализация простых алгоритмов на языке Java.
+### Ознакомиться с синтаксисом языка Java и его основными конструкциями.
+### Студент: Николаев Д.А.
+#### Общая постановка задачи: Необходимо реализовать консольное приложение, которое имеет примитивный текстовый интерфейс и меню, состоящее как минимум из четырех пунктов:
+- Ввод исходных данных, как вручную,  так и сгенерированных случайным образом
+- Выполнение алгоритма по заданию
+- Вывод результата
+- Завершение работы программы
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+#### Особые указания:
+- В работе можно использовать только массивы! Использование при выполнении данной работы класса ArrayList запрещено!
+- Алгоритм не может быть выполнен без введенных данных
+- Результат не может быть выведен без обработки введённых данных
+- Вывод результата не может быть осуществлен без выполнения алгоритма
+- При вводе новых данных результаты выполнения алгоритма "сбрасываются"
+- Варианты заданий, где указан массив слов подразумевают, что разделителями для слов являются пробельные символы и знаки препинания.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+#### Вариант задания:
+Входные данные: текст. Результат работы алгоритма: частотный анализ текста, т.е. массив пар: символ — частота встречаемости (число определенного символа к тексте / общее число символов в тексте).
