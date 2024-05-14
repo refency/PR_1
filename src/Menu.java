@@ -4,6 +4,11 @@ class Menu {
     menu_type_defifinition("", new String[0][2]);
   }
 
+  static void all_menu(String text) { // Overloading method for output text
+    main_menu();
+    menu_type_defifinition(text, new String[0][2]);
+  }
+
   static void all_menu(String text, String[][] array_of_frequency) { // Overloading method for output text
     main_menu();
     menu_type_defifinition(text, array_of_frequency);
@@ -34,10 +39,10 @@ class Menu {
     switch (input) {
       case "1":
         text = Functions.input_text("Insert your text: ");
-        all_menu(text, array_of_frequency);
+        all_menu(text);
       case "2":
         text = Functions.randomly_text_generate();
-        all_menu(text, array_of_frequency);
+        all_menu(text);
       case "3":
         array_of_frequency = Functions.text_frequency_analysis(text.toCharArray(), array_of_frequency);
         all_menu(text, array_of_frequency);

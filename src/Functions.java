@@ -103,6 +103,11 @@ class Functions {
   }
 
   static void output_text(String[][] array_of_frequency) { // Output analysed text in console
+    if (array_of_frequency.length == 0) {
+      System.out.println(Functions.Color("red") + "Your text is empty" + Functions.Color("reset"));
+      return;
+    }
+
     for (int i = 0; i < array_of_frequency.length; i++) {
       System.out.println(Functions.Color("green") + array_of_frequency[i][0] + Functions.Color("reset") + " : " +
                         Functions.Color("yellow") + array_of_frequency[i][1] + Functions.Color("reset"));
